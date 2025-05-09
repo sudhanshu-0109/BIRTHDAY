@@ -33,7 +33,7 @@ h1 {
   border-radius: 15px;
   margin: 0 auto 40px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-  max-width: 90%;
+  max-width: 50%;
 }
 
 .slideshow {
@@ -42,8 +42,8 @@ h1 {
 }
 
 .slideshow img {
-  width: 100%;
-  max-height: 400px;
+  width: 90%;
+  max-height: 300px;
   object-fit: cover;
   border-radius: 15px;
   animation: fadeIn 0.8s;
@@ -135,4 +135,3 @@ footer {
 .fade-in {
   animation: fadeIn 2s ease forwards;
 }
-  

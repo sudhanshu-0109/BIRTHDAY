@@ -1,95 +1,138 @@
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
-    color: #fff;
-    text-align: center;
-    overflow-x: hidden;
-  }
-  
-  .container {
-    padding: 50px 20px;
-    animation: fadeIn 2s ease;
-  }
-  
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  color: #fff;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 50px 20px;
+  animation: fadeIn 2s ease;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.message {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin: auto;
+  animation: fadeIn 2s ease 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.album {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 15px;
+  margin: 0 auto 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  max-width: 90%;
+}
+
+.slideshow {
+  position: relative;
+  overflow: hidden;
+}
+
+.slideshow img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  animation: fadeIn 0.8s;
+}
+
+.arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.arrows span {
+  font-size: 2em;
+  pointer-events: all;
+  cursor: pointer;
+  color: white;
+  padding: 12px;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.arrows span:hover {
+  background-color: rgba(0,0,0,0.7);
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 1em;
+  opacity: 0.9;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
   h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    animation: slideIn 1s ease-out;
+    font-size: 1.8em;
   }
-  
+
   .message {
-    font-size: 1.4em;
-    margin-bottom: 40px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    animation: fadeIn 2s ease 0.5s;
-    animation-fill-mode: forwards;
-  }
-  
-  .album {
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    border-radius: 15px;
-    max-height: 800px ;
-    max-width: 300px;
-    margin: 0 auto 40px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-  }
-  
-  .slideshow {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .slideshow img {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 15px;
-    animation: fadeIn 0.8s;
-  }
-  
-  .arrows {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-  }
-  
-  .arrows span {
-    font-size: 2em;
-    cursor: pointer;
-    color: white;
-    padding: 10px 20px;
-    background-color: rgba(0,0,0,0.4);
-    border-radius: 50%;
-    transition: background-color 0.3s;
-  }
-  
-  .arrows span:hover {
-    background-color: rgba(0,0,0,0.7);
-  }
-  
-  footer {
-    margin-top: 30px;
     font-size: 1em;
-    opacity: 0.8;
-    text-shadow: black;
-    color: #1A237E;
   }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+
+  .arrows span {
+    font-size: 1.5em;
+    padding: 8px;
   }
-  
-  @keyframes slideIn {
-    from { opacity: 0; transform: translateY(-50px); }
-    to { opacity: 1; transform: translateY(0); }
+
+  .album {
+    padding: 15px;
   }
+
+  footer {
+    font-size: 0.9em;
+    color: rgb(1, 1, 50);
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Animation classes */
+.bounce {
+  animation: bounceIn 2s ease infinite alternate;
+}
+
+.zoom-in {
+  animation: zoomIn 1.5s ease forwards;
+}
+
+.fade-in {
+  animation: fadeIn 2s ease forwards;
+}
   

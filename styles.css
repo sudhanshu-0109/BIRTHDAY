@@ -43,8 +43,8 @@ h1 {
 
 .slideshow img {
   width: 90%;
-  max-height: 300px;
-  object-fit: cover;
+  max-height: 400px;
+  object-fit: contain;
   border-radius: 15px;
   animation: fadeIn 0.8s;
 }
